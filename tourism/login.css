@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: inherit;
+}
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form{
+    padding: 80px 5px 80px 5px;
+    background:#282726;
+    box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.87);
+    opacity: 90%;
+    border-radius: 1.5rem;
+    margin-left: 250px;
+}
+.login-form h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+#sign{
+    font-weight: 600;
+    width: 100%;
+    border-radius: 1.5rem;
+}

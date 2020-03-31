@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-weight: bolder;
+}
+.title{
+    margin-left: 100px;
+   margin-top: 70px;
+   margin-bottom: 10px;
+}
+.img{
+    margin-left: 100px;
+    width: 70%;
+    height: 70%;
+}
+.footer{
+    background-color: rgb(36, 36, 44);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1cm;
+    padding-left: 150px;
+    margin-top: 200px;
+    
+}
