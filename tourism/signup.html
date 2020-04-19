@@ -6,7 +6,8 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+  
+  </head>
 <body>
     
 
@@ -35,19 +36,26 @@
           <div class="col-md-5 login-form" style="border: 3px solid white;">
               <h3 class="display-5">Create an account</h3>
               <div class="form-group">
-                <form name="form1" action="https://dcbookstore.com">
-                  <input type="text" class="form-control" placeholder="Username *" value="" name="username" required/>
+                <form name="form1" action="home.html"  onsubmit="return validation()">
+                  <input type="text" class="form-control" placeholder="Username *"  id="username"  required/>
               </div>
               
                   <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Email id *" value="" name="text1"/>
+                      <input type="email" class="form-control" placeholder="Email id *" id="email" required/>
                   </div>
                   <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password *" value="" name="pwd1"/>
-                  </div>
+                    <input type="number" class="form-control" placeholder="Phone number *"  id="phone" required/>
+                </div>
                   <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Confirm Password *" value="" name="pwd2"/>
+                      <input type="password" class="form-control" placeholder="Password *"  id="pswd1" required/>
                   </div>
+                  <div>
+                   
+                    <progress max="100" value="0" id="strength" style="width: 230px;"></progress>
+                     <p id="pswdstrength"  style="color: rgb(245, 243, 243);">Strength</p>
+
+                  </div>
+                  <br>
                   <div class="form-group">
                       <input type="submit" class="btn btn-outline-light btn-sm" value="SIGN UP" id="sign">
                     </div></form>
@@ -55,7 +63,60 @@
               
           </div>
 
+          <script>
+          var pswd1=document.getElementById("pswd1");
+          pswd1.addEventListener('keyup',function(){
+            checkPassword(pswd1.value)
+          })
 
+          function checkPassword(pswd1){
+            var strengthBar=document.getElementById("strength");
+            
+           
+            var strength=0;
+            if(/[a-z]/.test(pswd1)){
+              strength +=1;
+            }
+            if(/[A-Z]/.test(pswd1)){
+              strength +=1;
+            }
+            if(/[0-9]/.test(pswd1)){
+              strength +=1;
+            }
+            if(pswd1.length>=8){
+              strength +=1;
+            }
+           
+            switch(strength){
+             case 0:strengthBar.value=20;
+             break
+             case 1:strengthBar.value=50;
+    
+             break
+              case 2:strengthBar.value=80;
+               break
+              case 3:strengthBar.value=100;
+              break
+           }
+
+           if(strengthBar.value>=20 && strengthBar.value<=50){
+             pswdstrength.textContent="Poor";
+             pswdstrength.style.color="red";
+           }
+           if(strengthBar.value<=80 && strengthBar.value>50){
+             pswdstrength.textContent="Medium";
+             pswdstrength.style.color="orange";
+           }
+           if(strengthBar.value>80){
+             pswdstrength.textContent="Strong";
+             pswdstrength.style.color="green";
+           }
+            
+}
+
+      </script>
+
+          <script src="script.js"></script> 
           <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

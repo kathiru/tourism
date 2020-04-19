@@ -33,11 +33,14 @@
                 <h3>LOGIN</h3>
                 
                     <div class="form-group">
-                      <form name="form1" action="https://dcbookstore.com">
-                        <input type="text" class="form-control" placeholder="Email id*" value="" name="text1" />
+                      <form name="form1" action="#" onsubmit="return validation()">
+                        <input type="email" class="form-control" placeholder="Email id*" id="email" required />
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password *" value="" name="pwd1" />
+                      <input type="number" class="form-control" placeholder="Phone number *" id="phone" required/>
+                  </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password *" id="pswd1" required />
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-outline-light btn-sm" value="Login" id="sign">
@@ -46,7 +49,7 @@
             </div>
 
          
-
+            <script src="script.js"></script> 
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
